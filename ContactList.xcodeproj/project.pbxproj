@@ -15,6 +15,7 @@
 		420D74FC2B2B204F00B01646 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 420D74FA2B2B204F00B01646 /* LaunchScreen.storyboard */; };
 		420D75082B2B238600B01646 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420D75072B2B238600B01646 /* Person.swift */; };
 		420D750B2B2B25DE00B01646 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420D750A2B2B25DE00B01646 /* DataStore.swift */; };
+		420D750D2B2B3C9A00B01646 /* PersonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420D750C2B2B3C9A00B01646 /* PersonDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		420D74FD2B2B204F00B01646 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		420D75072B2B238600B01646 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		420D750A2B2B25DE00B01646 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		420D750C2B2B3C9A00B01646 /* PersonDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				420D74F32B2B204D00B01646 /* PersonsListViewController.swift */,
+				420D750C2B2B3C9A00B01646 /* PersonDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				420D74F42B2B204D00B01646 /* PersonsListViewController.swift in Sources */,
 				420D74F02B2B204D00B01646 /* AppDelegate.swift in Sources */,
+				420D750D2B2B3C9A00B01646 /* PersonDetailsViewController.swift in Sources */,
 				420D75082B2B238600B01646 /* Person.swift in Sources */,
 				420D750B2B2B25DE00B01646 /* DataStore.swift in Sources */,
 				420D74F22B2B204D00B01646 /* SceneDelegate.swift in Sources */,

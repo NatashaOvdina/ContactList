@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2c1-jB-Rye">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -12,17 +13,20 @@
             <objects>
                 <tableViewController id="vfn-0z-75V" customClass="PersonsListViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="huT-t2-zvB">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="uoZ-Q1-gna">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uoZ-Q1-gna" id="vcO-8x-YI6">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LYa-C4-dAv" kind="show" id="F1x-DO-iLI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -30,18 +34,63 @@
                             <outlet property="delegate" destination="vfn-0z-75V" id="Sxj-jk-tPE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Persons List" id="iBd-JZ-LfS"/>
+                    <navigationItem key="navigationItem" title="Persons List" id="iBd-JZ-LfS">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Gkx-jd-sgw"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWw-A4-QTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="606" y="-5"/>
+        </scene>
+        <!--Name Surname-->
+        <scene sceneID="pJL-IO-urm">
+            <objects>
+                <viewController id="LYa-C4-dAv" customClass="PersonDetailsViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C0D-Zc-ZhU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="MKc-FS-30s">
+                                <rect key="frame" x="16" y="179" width="133.33333333333334" height="94"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVW-OR-1mM">
+                                        <rect key="frame" x="0.0" y="0.0" width="133.33333333333334" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lA-0X-pgX">
+                                        <rect key="frame" x="0.0" y="70" width="57" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CWl-gY-eQr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MKc-FS-30s" firstAttribute="top" secondItem="CWl-gY-eQr" secondAttribute="top" constant="33" id="Y6O-Zu-LXh"/>
+                            <constraint firstItem="MKc-FS-30s" firstAttribute="leading" secondItem="CWl-gY-eQr" secondAttribute="leading" constant="16" id="erd-Ms-nuK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Name Surname" id="CMl-Gf-7S4"/>
+                    <connections>
+                        <outlet property="emailLabel" destination="5lA-0X-pgX" id="6L4-Op-yXi"/>
+                        <outlet property="numberLabel" destination="tVW-OR-1mM" id="swh-FZ-J4H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bsj-mj-phe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1380.9160305343512" y="-6.3380281690140849"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rdc-h7-9bk">
             <objects>
                 <navigationController id="2c1-jB-Rye" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="zel-tn-Dvt">
-                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
+                        <rect key="frame" x="0.0" y="50" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

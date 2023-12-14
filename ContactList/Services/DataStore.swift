@@ -5,7 +5,7 @@
 //  Created by Natalia Ovdina on 14.12.2023.
 //
 
-class DataStore {
+final class DataStore {
     let names: Set = ["Ann", "Bill", "Troye", "Lenny", "Sam", "Lindsey"]
     let surnames: Set = ["Jones", "Taylor", "Evans", "Davies", "Brown", "Armstrong"]
     let emails: Set = [

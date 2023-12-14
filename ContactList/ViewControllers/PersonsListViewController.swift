@@ -17,7 +17,11 @@ final class PersonsListViewController: UITableViewController {
        
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        let detailsVC = segue.destination as? PersonDetailsViewController
+        detailsVC?.person = personsList[indexPath.row]
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -35,5 +39,14 @@ extension PersonsListViewController {
         
         cell.contentConfiguration = content
         return cell
+    }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        moveRowAt sourceIndexPath: IndexPath,
+        to destinationIndexPath: IndexPath
+    ) {
+        let currentPerson = personsList.remove(at: sourceIndexPath.row)
+        personsList.insert(currentPerson, at: destinationIndexPath.row)
     }
 }
