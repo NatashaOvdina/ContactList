@@ -6,9 +6,9 @@
 //
 
 class DataStore {
-    let names = ["Ann", "Bill", "Troye", "Lenny", "Sam", "Lindsey"]
-    let surnames = ["Jones", "Taylor", "Evans", "Davies", "Brown", "Armstrong"]
-    let emails = [
+    let names: Set = ["Ann", "Bill", "Troye", "Lenny", "Sam", "Lindsey"]
+    let surnames: Set = ["Jones", "Taylor", "Evans", "Davies", "Brown", "Armstrong"]
+    let emails: Set = [
         "an213@google.com",
         "bryer92@yahoo.com",
         "manishq@gmail.com",
@@ -16,7 +16,7 @@ class DataStore {
         "13knw@yahoo.com",
         "73qlNwb@mail.ru"
     ]
-    let telephoneNumbers = [
+    let telephoneNumbers: Set = [
         "36856392",
         "35022903",
         "38955541",
