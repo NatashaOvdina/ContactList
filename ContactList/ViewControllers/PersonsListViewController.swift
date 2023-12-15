@@ -10,7 +10,8 @@ import UIKit
 final class PersonsListViewController: UITableViewController {
 
     
-    private var personsList = Person.getRandomPeople()
+    private var personsList = Person.getUniquePeopleList()
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()

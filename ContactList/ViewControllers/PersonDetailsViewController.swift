@@ -14,6 +14,7 @@ final class PersonDetailsViewController: UIViewController {
     
     var person: Person!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = person.title

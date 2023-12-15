@@ -34,13 +34,14 @@
                             <outlet property="delegate" destination="vfn-0z-75V" id="Sxj-jk-tPE"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.crop.circle" catalog="system" id="n4J-Hv-2Qr"/>
                     <navigationItem key="navigationItem" title="Persons List" id="iBd-JZ-LfS">
                         <barButtonItem key="backBarButtonItem" title="Back" id="Gkx-jd-sgw"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iWw-A4-QTd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="-5"/>
+            <point key="canvasLocation" x="559" y="-5"/>
         </scene>
         <!--Name Surname-->
         <scene sceneID="pJL-IO-urm">
@@ -83,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bsj-mj-phe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1380.9160305343512" y="-6.3380281690140849"/>
+            <point key="canvasLocation" x="1418" y="-5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Rdc-h7-9bk">
@@ -94,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="vfn-0z-75V" kind="relationship" relationship="rootViewController" id="WOc-PP-lDD"/>
+                        <segue destination="vfn-0z-75V" kind="relationship" relationship="rootViewController" id="lvh-fD-PYw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eOp-TX-SzO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,6 +104,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

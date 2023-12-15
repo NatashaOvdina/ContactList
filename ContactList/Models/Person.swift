@@ -14,22 +14,38 @@ struct Person {
     var title: String {
         "\(name) \(surname)"
     }
-    
-    static func getRandomPeople() -> [Person] {
-        var randomPeople: [Person] = []
         
-        let persons = DataStore()
+    static func getUniquePeopleList() -> [Person] {
+        var uniquePeople: [Person] = []
+        let dataStore = DataStore()
         
-        for _ in 1...persons.names.count {
-            let randomName = persons.names.randomElement() ?? ""
-            let randomSurname = persons.surnames.randomElement() ?? ""
-            let randomEmail = persons.emails.randomElement() ?? ""
-            let randomTelephone = persons.telephoneNumbers.randomElement() ?? ""
+        
+        let names = dataStore.names.shuffled()
+        let surnames = dataStore.surnames.shuffled()
+        let emails = dataStore.emails.shuffled()
+        let telephoneNumbers = dataStore.telephoneNumbers.shuffled()
+        
+        let peopleCount = [
+            names.count,
+            surnames.count,
+            emails.count,
+            telephoneNumbers.count
+        ].min()
+        
+        guard let peopleCount else { return [] }
+        
+        for index in 0..<peopleCount {
+            let person = Person(
+                name: names[index],
+                surname: surnames[index],
+                email: emails[index],
+                telephoneNumber: telephoneNumbers[index]
+            )
             
-            let person = Person(name: randomName, surname: randomSurname, email: randomEmail, telephoneNumber: randomTelephone)
+            uniquePeople.append(person)
             
-            randomPeople.append(person)
         }
-        return randomPeople
+        return uniquePeople
     }
 }
+
