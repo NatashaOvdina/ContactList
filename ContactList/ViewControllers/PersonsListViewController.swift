@@ -9,9 +9,7 @@ import UIKit
 
 final class PersonsListViewController: UITableViewController {
 
-    
-    private var personsList = Person.getUniquePeopleList()
-    var person: Person!
+    var person: [Person]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,19 +19,19 @@ final class PersonsListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let detailsVC = segue.destination as? PersonDetailsViewController
-        detailsVC?.person = personsList[indexPath.row]
+        detailsVC?.person = person[indexPath.row]
     }
 }
 
 // MARK: - UITableViewDataSource
 extension PersonsListViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        personsList.count
+        person.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
-        let person = personsList[indexPath.row]
+        let person = person[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
         content.text = person.title
@@ -47,7 +45,7 @@ extension PersonsListViewController {
         moveRowAt sourceIndexPath: IndexPath,
         to destinationIndexPath: IndexPath
     ) {
-        let currentPerson = personsList.remove(at: sourceIndexPath.row)
-        personsList.insert(currentPerson, at: destinationIndexPath.row)
+        let currentPerson = person.remove(at: sourceIndexPath.row)
+        person.insert(currentPerson, at: destinationIndexPath.row)
     }
 }

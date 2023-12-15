@@ -52,7 +52,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="telephoneDetailCell" textLabel="rOk-Ga-cwd" imageView="orZ-bZ-Css" style="IBUITableViewCellStyleDefault" id="j0c-Ry-7Mn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="infoCell" textLabel="rOk-Ga-cwd" imageView="orZ-bZ-Css" style="IBUITableViewCellStyleDefault" id="j0c-Ry-7Mn">
                                 <rect key="frame" x="0.0" y="38" width="375" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j0c-Ry-7Mn" id="mqF-L3-Dd8">
@@ -68,27 +68,6 @@
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="phone" catalog="system" id="orZ-bZ-Css">
                                             <rect key="frame" x="21.833333333333336" y="12.666666666666666" width="20.333333333333332" height="18.333333333333332"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </imageView>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="emailDetailCell" textLabel="Ap1-Hs-2oM" imageView="GRf-W8-uwi" style="IBUITableViewCellStyleDefault" id="6Eb-Bz-bKh">
-                                <rect key="frame" x="0.0" y="81.666667938232422" width="375" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="1" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Eb-Bz-bKh" id="MeV-v5-r1l">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ap1-Hs-2oM">
-                                            <rect key="frame" x="59" y="0.0" width="296" height="43.666667938232422"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="mail.fill" catalog="system" id="GRf-W8-uwi">
-                                            <rect key="frame" x="20.166666666666664" y="12.999999999999998" width="23.666666666666668" height="17.333333333333332"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -190,6 +169,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A79-Kd-h55" customClass="TabBarViewController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ClF-1q-s2m">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -204,7 +184,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="mail.fill" catalog="system" width="128" height="93"/>
         <image name="person.crop.circle" catalog="system" width="128" height="123"/>
         <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
         <image name="phone" catalog="system" width="128" height="115"/>
