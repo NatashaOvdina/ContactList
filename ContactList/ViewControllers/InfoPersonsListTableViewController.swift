@@ -11,12 +11,6 @@ final class InfoPersonsListTableViewController: UITableViewController {
     
     private var personsList = Person.getUniquePeopleList()
     var person: [Person]!
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
 }
 
 // MARK: - UITableViewDataSource
@@ -67,4 +61,8 @@ extension InfoPersonsListTableViewController {
         50
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }

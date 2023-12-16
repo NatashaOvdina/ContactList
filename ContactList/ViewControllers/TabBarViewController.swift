@@ -15,14 +15,15 @@ final class TabBarViewController: UITabBarController {
         
         guard let viewControllers else { return }
         for viewController in viewControllers {
-            if let navigationVC = viewController as? UINavigationController {
-                if let personListVC = navigationVC.topViewController as? PersonsListViewController {
+            let navigationVC = viewController as? UINavigationController
+                
+            if let personListVC = navigationVC?.topViewController as? PersonsListViewController {
                     personListVC.person = person
-                } else if let infoPersonVC = navigationVC.topViewController as? InfoPersonsListTableViewController {
+                } else if let infoPersonVC = navigationVC?.topViewController as? InfoPersonsListTableViewController {
                     infoPersonVC.person = person
                 }
             }
         }
     }
-}
+
 

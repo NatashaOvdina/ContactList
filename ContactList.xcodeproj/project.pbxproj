@@ -89,10 +89,10 @@
 		420D75042B2B211500B01646 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				420D74F32B2B204D00B01646 /* PersonsListViewController.swift */,
-				420D75122B2CA19A00B01646 /* InfoPersonsListTableViewController.swift */,
-				420D750C2B2B3C9A00B01646 /* PersonDetailsViewController.swift */,
 				420D75142B2CAD8300B01646 /* TabBarViewController.swift */,
+				420D74F32B2B204D00B01646 /* PersonsListViewController.swift */,
+				420D750C2B2B3C9A00B01646 /* PersonDetailsViewController.swift */,
+				420D75122B2CA19A00B01646 /* InfoPersonsListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
