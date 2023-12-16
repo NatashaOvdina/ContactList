@@ -14,13 +14,11 @@ final class PersonDetailsViewController: UIViewController {
     
     var person: Person!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = person.title
         numberLabel.text = "Phone number: \(person.telephoneNumber)"
         emailLabel.text = "Email: \(person.email)"
-
     }
     
 

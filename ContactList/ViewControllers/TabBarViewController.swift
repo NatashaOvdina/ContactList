@@ -8,6 +8,7 @@
 import UIKit
 
 final class TabBarViewController: UITabBarController {
+    
     private var person = Person.getUniquePeopleList()
 
     override func viewDidLoad() {

@@ -9,8 +9,8 @@ import UIKit
 
 final class InfoPersonsListTableViewController: UITableViewController {
     
-    private var personsList = Person.getUniquePeopleList()
     var person: [Person]!
+    private var personsList = Person.getUniquePeopleList()
 }
 
 // MARK: - UITableViewDataSource
@@ -29,7 +29,7 @@ extension InfoPersonsListTableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath)
-        let person = personsList[indexPath.row]
+        let person = person[indexPath.section]
         
         var content = cell.defaultContentConfiguration()
         if indexPath.row == 0 {

@@ -8,14 +8,9 @@
 import UIKit
 
 final class PersonsListViewController: UITableViewController {
-
+    
     var person: [Person]!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-       
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let detailsVC = segue.destination as? PersonDetailsViewController
@@ -30,7 +25,7 @@ extension PersonsListViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personCell", for: indexPath)
         let person = person[indexPath.row]
         
         var content = cell.defaultContentConfiguration()
